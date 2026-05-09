@@ -1,9 +1,11 @@
+import heroImg from '../assets/hero.png';
+
 export default function Hero() {
   return (
     <section className="hero">
       <div className="animate-fade-up">
         <div className="hero-badge">
-          ✦ A place of recitation, reflection, and growth
+          A place of recitation, reflection, and growth
         </div>
       </div>
 
@@ -63,6 +65,12 @@ export default function Hero() {
           <div className="hstat-l">Tajweed lessons</div>
         </div>
       </div>
+      <img
+        src={heroImg}
+        alt=""
+        aria-hidden="true"
+        className="hero-bg-image"
+      />
     </section>
   );
 }

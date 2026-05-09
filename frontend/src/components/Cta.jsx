@@ -1,7 +1,7 @@
 const TESTIMONIALS = [
   {
     stars: '★★★★★',
-    quote: 'I tried many apps but مقرأتي is the only one that actually held me accountable. I finished Al-Baqarah in 8 months — something I could never do before.',
+    quote: 'I tried many apps but Miqra\'ati is the only one that actually held me accountable. I finished Al-Baqarah in 8 months — something I could never do before.',
     initials: 'YA',
     bg: '#1D4ED8',
     name: 'Yusuf Ahmed',
@@ -9,7 +9,7 @@ const TESTIMONIALS = [
   },
   {
     stars: '★★★★★',
-    quote: 'The Tajweed lessons are incredible. I used to think my Makharij was fine — Maqra\'ati showed me exactly where I needed work. My recitation improved in weeks.',
+    quote: 'The Tajweed lessons are incredible. I used to think my Makharij was fine — Miqra\'ati showed me exactly where I needed work. My recitation improved in weeks.',
     initials: 'FM',
     bg: '#15803D',
     name: 'Fatima Malik',
@@ -17,7 +17,7 @@ const TESTIMONIALS = [
   },
   {
     stars: '★★★★★',
-    quote: 'My kids are 12 and 14 and they are actually competing with each other to keep their streaks. Maqra\'ati turned Quran memorization into something they look forward to.',
+    quote: 'My kids are 12 and 14 and they are actually competing with each other to keep their streaks. Miqra\'ati turned Quran memorization into something they look forward to.',
     initials: 'AH',
     bg: '#7C3AED',
     name: 'Amina Hassan',
@@ -29,10 +29,9 @@ export function Testimonials() {
   return (
     <section className="testimonials-section">
       <div className="section-header">
-        <div className="section-tag">Community</div>
         <h2 className="section-title">From learners like you</h2>
         <p className="section-sub">
-          Over 120,000 Muslims worldwide are building their Hifz habit with مقرأتي.
+          Over 120,000 Muslims worldwide are building their Hifz habit with Miqra'ati.
         </p>
       </div>
       <div className="testimonials-grid">
@@ -60,7 +59,6 @@ export function CtaSection() {
   return (
     <section className="cta-section">
       <div className="cta-box">
-        <div style={{ fontSize: 48, marginBottom: 16 }}>📖</div>
         <h2>Begin your Hifz journey today</h2>
         <p>Free forever for the first Juz. No credit card. No excuses.</p>
         <div className="cta-actions" style={{ marginTop: 28 }}>
@@ -81,7 +79,7 @@ export function Footer() {
     <footer className="footer">
       <div className="footer-logo">
         <span className="footer-logo-ar">مقرأتي</span>
-        Maqra<em>'ati</em>
+        Miqra<em>'ati</em>
       </div>
       <div className="footer-tagline">Your sacred space to memorize & recite the Quran.</div>
       <div className="footer-links">
@@ -90,7 +88,7 @@ export function Footer() {
         ))}
       </div>
       <div className="footer-sep" />
-      <div className="footer-copy">© 2025 Maqra'ati. Built with ❤️ for the Ummah.</div>
+      <div className="footer-copy">© 2025 Miqra'ati. Built with devotion for the Ummah.</div>
     </footer>
   );
 }

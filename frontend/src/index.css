@@ -119,7 +119,7 @@ body {
 }
 .navbar-logo-text { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--white); letter-spacing: -0.3px; }
 .navbar-logo-text em { color: var(--gold-300); font-style: italic; }
-.navbar-logo-ar { font-family: 'Amiri', serif; font-size: 18px; color: var(--teal-300); margin-right: 4px; }
+.navbar-logo-ar { font-family: 'Amiri', serif; font-size: 18px; color: var(--teal-300); margin-right: 8px; }
 
 .navbar-links { display: flex; gap: 2px; }
 .navbar-link {
@@ -224,30 +224,6 @@ body {
 .hstat-n { font-family: 'DM Serif Display', serif; font-size: 30px; color: var(--gold-300); }
 .hstat-l { font-size: 12px; color: var(--teal-300); font-weight: 500; margin-top: 2px; letter-spacing: 0.5px; font-family: 'Lora', serif; }
 
-/* ─── Strip ─── */
-.features-strip {
-  background: var(--teal-800);
-  padding: 14px 24px;
-  display: flex;
-  justify-content: flex-start;
-  gap: 32px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Hide scrollbar for cleaner look */
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-.features-strip::-webkit-scrollbar { display: none; }
-
-.fstrip-item {
-  display: flex; align-items: center; gap: 8px;
-  color: var(--teal-300); font-size: 13px; font-weight: 500;
-  white-space: nowrap; font-family: 'Lora', serif;
-}
-.fstrip-item .fstrip-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--gold-500); flex-shrink: 0;
-}
-
 /* ─── General section ─── */
 .section-inner { max-width: 1040px; margin: 0 auto; }
 
@@ -258,15 +234,6 @@ body {
 .testimonials-section { padding: 88px 24px; background: var(--surface); }
 .cta-section { padding: 100px 24px; background: var(--teal-900); text-align: center; }
 
-.section-header { text-align: center; margin-bottom: 56px; }
-.section-tag {
-  display: inline-block;
-  background: var(--gold-100); color: var(--gold-800);
-  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;
-  padding: 4px 16px; border-radius: var(--r-full);
-  margin-bottom: 16px; font-family: 'Lora', serif;
-  border: 1px solid var(--gold-200);
-}
 .section-title {
   font-family: 'DM Serif Display', serif;
   font-size: 38px; font-weight: 400; color: var(--ink);
@@ -279,7 +246,6 @@ body {
 }
 
 /* Dark section overrides */
-.motivation-section .section-tag { background: rgba(255,255,255,0.1); color: var(--gold-200); border-color: rgba(255,255,255,0.15); }
 .motivation-section .section-title { color: var(--white); }
 .motivation-section .section-sub { color: var(--teal-200); }
 .cta-section .section-title { color: var(--white); }
@@ -294,6 +260,7 @@ body {
   background: var(--white); border-radius: var(--r-2xl);
   border: 1.5px solid var(--border); padding: 32px 24px; text-align: center;
   transition: all 0.2s ease; position: relative; overflow: hidden;
+  cursor: pointer;
 }
 .step-card::before {
   content: '';
@@ -325,6 +292,7 @@ body {
   background: var(--white); border-radius: var(--r-2xl);
   border: 1.5px solid var(--border); padding: 28px 26px;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 .feature-card:hover { border-color: var(--teal-300); box-shadow: var(--shadow-md); transform: translateY(-2px); }
 .feature-icon {
@@ -344,6 +312,7 @@ body {
   background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
   border-radius: var(--r-xl); padding: 28px 24px; text-align: center;
   transition: all 0.2s;
+  cursor: pointer;
 }
 .pillar-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); transform: translateY(-2px); }
 .pillar-icon { font-size: 36px; margin-bottom: 14px; }
@@ -358,6 +327,7 @@ body {
   display: flex; align-items: center; gap: 10px;
   background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--r-full); padding: 10px 20px;
+  cursor: pointer;
 }
 .milestone-icon { font-size: 18px; }
 .milestone-text { font-size: 13px; color: var(--teal-100); font-weight: 500; }
@@ -432,6 +402,7 @@ body {
 .testimonial-card {
   background: var(--white); border: 1.5px solid var(--border); border-radius: var(--r-2xl); padding: 28px;
   position: relative;
+  cursor: pointer;
 }
 .testimonial-card::before {
   content: '\201C';
@@ -506,13 +477,61 @@ body {
   .cta-box-title { font-size: 30px; }
 }
 
+.steps-timeline { max-width: 580px; margin: 0 auto; }
+.timeline-row { display: flex; gap: 28px; }
+.timeline-left { display: flex; flex-direction: column; align-items: center; width: 56px; flex-shrink: 0; }
+.timeline-num {
+  width: 56px; height: 56px;
+  background: var(--teal-900); color: var(--white);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'DM Serif Display', serif; font-size: 22px;
+  flex-shrink: 0;
+}
+.timeline-line { width: 2px; flex: 1; background: var(--border-dark); min-height: 32px; margin: 8px 0; }
+.timeline-body { padding-bottom: 40px; padding-top: 12px; }
+.timeline-title { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--ink); margin-bottom: 8px; }
+.timeline-desc { font-size: 14px; color: var(--muted); line-height: 1.8; font-style: italic; }
+
+.features-list { max-width: 880px; margin: 0 auto; }
+.feature-row {
+  display: flex; align-items: center; gap: 0;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.feature-row:first-child { border-top: 1px solid var(--border); }
+.feature-row--reverse { flex-direction: row-reverse; }
+.feature-row:hover { background: var(--teal-50); }
+.feature-row-title {
+  width: 280px; flex-shrink: 0;
+  font-family: 'DM Serif Display', serif; font-size: 22px;
+  color: var(--ink); padding: 0 40px;
+  line-height: 1.25;
+}
+.feature-row-divider { width: 1px; align-self: stretch; background: var(--border-dark); flex-shrink: 0; }
+.feature-row-desc {
+  flex: 1; font-size: 14px; color: var(--muted);
+  line-height: 1.8; font-style: italic; padding: 0 40px;
+}
+
+.hero-bg-image {
+  position: absolute;
+  right: 0; bottom: 80px;
+  height: 420px; width: auto;
+  opacity: 0.09;
+  pointer-events: none;
+  object-fit: contain;
+  mix-blend-mode: luminosity;
+}
+
 /* ─── Motivation / Milestone section (formerly gamify) ─── */
 .gamify-section {
   padding: 88px 24px;
   background: var(--teal-900);
   text-align: center;
 }
-.gamify-section .section-tag { background: rgba(255,255,255,0.1); color: var(--gold-200); border-color: rgba(255,255,255,0.15); }
 .gamify-section .section-title { color: var(--white); }
 .gamify-section .section-sub { color: var(--teal-200); }
 
@@ -571,6 +590,7 @@ body {
 }
 .surah-row:last-child { border-bottom: none; }
 .surah-row:hover { background: var(--teal-50); }
+.surah-row { cursor: pointer; }
 .surah-num {
   width: 36px; height: 36px;
   background: var(--teal-900); color: var(--white);
