@@ -144,7 +144,7 @@ body {
 
 /* ─── Hero ─── */
 .hero {
-  padding: 80px 24px 100px;
+  padding: 80px 24px 140px;
   text-align: center;
   background: var(--teal-900);
   position: relative; overflow: hidden;
@@ -227,10 +227,17 @@ body {
 /* ─── Strip ─── */
 .features-strip {
   background: var(--teal-800);
-  padding: 12px 24px;
-  display: flex; justify-content: center; gap: 40px; overflow-x: auto;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 32px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Hide scrollbar for cleaner look */
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
+.features-strip::-webkit-scrollbar { display: none; }
+
 .fstrip-item {
   display: flex; align-items: center; gap: 8px;
   color: var(--teal-300); font-size: 13px; font-weight: 500;
@@ -497,4 +504,91 @@ body {
   .features-strip { gap: 20px; }
   .section-title { font-size: 28px; }
   .cta-box-title { font-size: 30px; }
+}
+
+/* ─── Motivation / Milestone section (formerly gamify) ─── */
+.gamify-section {
+  padding: 88px 24px;
+  background: var(--teal-900);
+  text-align: center;
+}
+.gamify-section .section-tag { background: rgba(255,255,255,0.1); color: var(--gold-200); border-color: rgba(255,255,255,0.15); }
+.gamify-section .section-title { color: var(--white); }
+.gamify-section .section-sub { color: var(--teal-200); }
+
+.gamify-cards {
+  display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;
+  max-width: 800px; margin: 0 auto;
+}
+.gamify-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--r-xl);
+  padding: 28px 32px;
+  min-width: 150px;
+  transition: all 0.2s;
+}
+.gamify-card:hover { background: rgba(255,255,255,0.11); transform: translateY(-2px); }
+.gamify-icon { font-size: 32px; margin-bottom: 10px; }
+.gamify-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 34px; color: var(--gold-300);
+  line-height: 1; margin-bottom: 6px;
+}
+.gamify-card:hover .gamify-num { color: var(--gold-200); }
+.gamify-label { font-size: 13px; color: var(--teal-200); font-weight: 500; }
+
+/* Blue variable shims (used in milestone table inline styles) */
+:root {
+  --blue-50:  #EFF6FF;
+  --blue-200: #BFDBFE;
+  --blue-600: #2563EB;
+  --blue-700: #1D4ED8;
+  --blue-800: #1E3A5F;
+  --blue-100: #DBEAFE;
+  --blue-300: #93C5FD;
+  --green-light: #F0FDF4;
+}
+
+/* ─── Surahs section styles (kept for ContentDemoSection backward compat) ─── */
+.surahs-section {
+  padding: 88px 24px;
+  background: var(--parchment);
+}
+.surahs-section .section-header { margin-bottom: 40px; }
+.surah-list {
+  max-width: 680px; margin: 0 auto;
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-2xl);
+  overflow: hidden;
+  background: var(--white);
+}
+.surah-row {
+  display: flex; align-items: center; gap: 16px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+.surah-row:last-child { border-bottom: none; }
+.surah-row:hover { background: var(--teal-50); }
+.surah-num {
+  width: 36px; height: 36px;
+  background: var(--teal-900); color: var(--white);
+  border-radius: var(--r-md);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'DM Serif Display', serif; font-size: 14px;
+  flex-shrink: 0;
+}
+.surah-info { flex: 1; }
+.surah-name-en { font-size: 15px; font-weight: 600; color: var(--ink); font-family: 'Lora', serif; }
+.surah-meta { font-size: 12px; color: var(--muted); font-style: italic; margin-top: 2px; }
+.surah-name-ar {
+  font-family: 'Amiri', serif; font-size: 20px;
+  color: var(--teal-700); direction: rtl;
+}
+.surah-xp {
+  font-size: 12px; font-weight: 700;
+  background: rgba(245,158,11,0.12);
+  color: var(--gold-700);
+  padding: 3px 10px; border-radius: var(--r-full);
 }

@@ -1,9 +1,9 @@
 const STRIP_ITEMS = [
-  { emoji: '🔥', label: 'Daily streaks' },
-  { emoji: '⭐', label: 'XP rewards' },
-  { emoji: '🎙️', label: 'Voice recitation' },
+  { emoji: '🌟', label: 'Daily streaks' },
   { emoji: '📿', label: 'Tajweed rules' },
-  { emoji: '🏆', label: 'Leaderboards' },
+  { emoji: '🎙️', label: 'Recitation lessons' },
+  { emoji: '📖', label: 'Structured Hifz path' },
+  { emoji: '🕌', label: 'Scholar-approved method' },
   { emoji: '📊', label: 'Progress tracking' },
 ];
 
@@ -16,17 +16,17 @@ const STEPS = [
   {
     num: '2', emoji: '👂',
     title: 'Listen & learn',
-    desc: 'Hear a master reciter, follow along with color-coded Tajweed markup.',
+    desc: 'Hear a master reciter, follow along with color-coded Tajweed markup — lesson by lesson.',
   },
   {
     num: '3', emoji: '🗣️',
-    title: 'Recite aloud',
-    desc: 'Our AI listens to your recitation and gives instant feedback on pronunciation.',
+    title: 'Practice with lessons',
+    desc: 'Structured recitation lessons guide you through each ayah with expert pronunciation guidance.',
   },
   {
     num: '4', emoji: '🔁',
     title: 'Repeat & memorize',
-    desc: 'Spaced repetition reminds you at the perfect moment to review and solidify.',
+    desc: 'Spaced repetition reminds you at the perfect moment to review and solidify your memorization.',
   },
 ];
 
@@ -34,8 +34,8 @@ const FEATURES = [
   {
     icon: '🎙️',
     bg: 'var(--blue-50)',
-    title: 'AI Tajweed feedback',
-    desc: 'Recite and get instant pronunciation scores. Our model knows every rule — from Ghunnah to Qalqalah.',
+    title: 'Guided recitation lessons',
+    desc: 'Step-by-step lessons with expert reciters walk you through every ayah — from pronunciation to melody.',
   },
   {
     icon: '🧠',
@@ -44,10 +44,10 @@ const FEATURES = [
     desc: 'Science-backed review scheduling ensures you never forget an ayah you have already memorized.',
   },
   {
-    icon: '🔥',
+    icon: '🌟',
     bg: '#FFF7ED',
-    title: 'Streak & XP system',
-    desc: 'Earn XP for every session, keep your streak alive, and compete with friends on the leaderboard.',
+    title: 'Streak & milestone system',
+    desc: 'Build the daily habit with streaks and meaningful milestones that mark your journey through the Quran.',
   },
   {
     icon: '📿',
@@ -59,7 +59,7 @@ const FEATURES = [
     icon: '📊',
     bg: 'var(--blue-50)',
     title: 'Progress dashboard',
-    desc: 'See your memorization heatmap, daily XP, completed Surahs, and weekly goals at a glance.',
+    desc: 'See your memorization heatmap, daily progress, completed Surahs, and weekly goals at a glance.',
   },
   {
     icon: '🌙',
@@ -82,6 +82,8 @@ export function FeaturesStrip() {
   );
 }
 
+
+
 export function HowItWorks() {
   return (
     <section className="how-section">
@@ -89,7 +91,7 @@ export function HowItWorks() {
         <div className="section-tag">How it works</div>
         <h2 className="section-title">Four steps to your Hifz</h2>
         <p className="section-sub">
-          A structured path that mirrors how traditional scholars memorized — now supercharged with technology.
+          A structured path that mirrors how traditional scholars memorized — now enriched with thoughtful technology.
         </p>
       </div>
       <div className="steps-grid">
