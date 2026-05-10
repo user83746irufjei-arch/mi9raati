@@ -1,2 +1,2 @@
-you will be working along side with an ai tool that have a full access to the project, so for each modification, generate a prompt asking this ai tool to remove, add or replace
+you will be working along side with an ai tool that have a full access to the project, so for each modification, generate a prompt asking this ai tool to remove, add or replace, for changes tell the ai what exactely to change, I mean tell it the code directly
 about you responses, I want just text responses, no visual audits, and if you have any question feel free to ask

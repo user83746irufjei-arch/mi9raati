@@ -10,10 +10,10 @@ export default function Navbar() {
       </a>
 
       <div className="navbar-links">
-        <button className="navbar-link">How it works</button>
-        <button className="navbar-link">Features</button>
-        <button className="navbar-link">Tajweed</button>
-        <button className="navbar-link">Pricing</button>
+        <button className="navbar-link" onClick={() => document.querySelector('.how-section').scrollIntoView({ behavior: 'smooth' })}>How it works</button>
+        <button className="navbar-link" onClick={() => document.querySelector('.features-section').scrollIntoView({ behavior: 'smooth' })}>Features</button>
+        <button className="navbar-link" onClick={() => document.querySelector('.tajweed-section').scrollIntoView({ behavior: 'smooth' })}>Tajweed</button>
+        <button className="navbar-link" onClick={() => document.querySelector('.testimonials-section').scrollIntoView({ behavior: 'smooth' })}>Community</button>
       </div>
 
       <div className="navbar-actions">

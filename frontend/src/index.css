@@ -227,10 +227,10 @@ body {
 /* ─── General section ─── */
 .section-inner { max-width: 1040px; margin: 0 auto; }
 
-.how-section { padding: 88px 24px; background: var(--parchment); }
+.how-section { padding: 88px 24px; background: var(--surface); }
 .features-section { padding: 88px 24px; background: var(--surface); }
-.motivation-section { padding: 88px 24px; background: var(--teal-900); }
-.preview-section { padding: 88px 24px; background: var(--parchment); position: relative; }
+.motivation-section { padding: 88px 24px 0; background: var(--teal-900); }
+.preview-section { padding: 88px 24px; background: var(--surface); position: relative; }
 .testimonials-section { padding: 88px 24px; background: var(--surface); }
 .cta-section { padding: 100px 24px; background: var(--teal-900); text-align: center; }
 
@@ -647,4 +647,154 @@ body {
   background: rgba(245,158,11,0.12);
   color: var(--gold-700);
   padding: 3px 10px; border-radius: var(--r-full);
+}
+/* --- Tajweed Section --- */
+.tajweed-section {
+  padding: 88px 24px;
+  background: var(--surface);
+}
+
+.tajweed-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.tajweed-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-2xl);
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.2s ease;
+}
+.tajweed-card:hover {
+  border-color: var(--teal-300);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.tajweed-card--video {
+  padding: 0;
+  overflow: hidden;
+}
+
+.tajweed-video-thumb {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+}
+
+.tajweed-thumb-img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.tajweed-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.tajweed-play-btn:hover {
+  transform: translate(-50%, -60%) scale(1.1);
+  box-shadow: 0 6px 28px rgba(0,0,0,0.32);
+}
+
+.tajweed-video-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(11, 43, 46, 0.82);
+  backdrop-filter: blur(6px);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tajweed-video-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 15px;
+  color: var(--white);
+}
+
+.tajweed-video-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--gold-300);
+  background: rgba(212,151,10,0.18);
+  padding: 3px 10px;
+  border-radius: var(--r-full);
+}
+
+.tajweed-card-icon {
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.tajweed-card-ar {
+  font-family: 'Amiri', serif;
+  font-size: 22px;
+  color: var(--teal-700);
+  direction: rtl;
+  line-height: 1.4;
+}
+
+.tajweed-card-title-main {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  color: var(--ink);
+}
+
+.tajweed-card-subtitle {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.tajweed-card-desc {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-style: italic;
+  flex: 1;
+}
+
+.tajweed-card-link {
+  margin-top: 8px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--teal-600);
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.15s;
+}
+.tajweed-card-link:hover {
+  color: var(--teal-800);
 }

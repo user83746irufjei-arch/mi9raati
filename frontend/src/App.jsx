@@ -2,9 +2,10 @@ import './index.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import { HowItWorks, FeatureCards } from './components/Sections';
-import MotivationSection from './components/MotivationSection';
+import TajweedSection from './components/TajweedSection';
 import ContentDemoSection from './components/ContentDemoSection';
 import { Testimonials, CtaSection, Footer } from './components/Cta';
+import MotivationSection from './components/MotivationSection';
 
 export default function App() {
   return (
@@ -14,9 +15,10 @@ export default function App() {
       <Hero />
       <HowItWorks />
       <FeatureCards />
-      <MotivationSection />
+      <TajweedSection />
       <ContentDemoSection />
       <Testimonials />
+      <MotivationSection />
       <CtaSection />
       <Footer />
     </>
