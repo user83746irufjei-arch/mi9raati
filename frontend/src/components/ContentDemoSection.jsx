@@ -8,14 +8,38 @@ export default function ContentDemoSection() {
         </p>
       </div>
 
-      <div style={{
-        width: '100%',
-        maxWidth: 700,
-        margin: '0 auto',
-        height: 320,
-        background: '#164e55',
-        borderRadius: 20,
-      }} />
+      <div className="preview-mockup">
+        <div className="mockup-header">
+          <div className="mockup-dots">
+            <div className="mockup-dot" style={{ background: '#EF4444' }}></div>
+            <div className="mockup-dot" style={{ background: '#F59E0B' }}></div>
+            <div className="mockup-dot" style={{ background: '#22C55E' }}></div>
+          </div>
+          <div className="mockup-title">Surah Al-Fatiha</div>
+        </div>
+        <div className="mockup-body">
+          <div className="mockup-surah-header">
+            <div className="mockup-surah-ar">الفاتحة</div>
+            <div className="mockup-surah-en">The Opening — Al-Fatiha</div>
+          </div>
+          {[
+            { n: 1, ar: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', tr: 'Bismillāhir-raḥmānir-raḥīm' },
+            { n: 2, ar: 'ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ', tr: 'Al-ḥamdu lillāhi rabbi l-ʿālamīn' },
+            { n: 3, ar: 'ٱلرَّحْمَٰنِ ٱلرَّحِيمِ', tr: 'Ar-raḥmānir-raḥīm' },
+          ].map(ayah => (
+            <div className="mockup-ayah-row" key={ayah.n}>
+              <div className="mockup-ayah-num">{ayah.n}</div>
+              <div style={{ flex: 1 }}>
+                <div className="mockup-ayah-ar">{ayah.ar}</div>
+                <div className="mockup-ayah-tr">{ayah.tr}</div>
+              </div>
+            </div>
+          ))}
+          <div className="mockup-progress-bar">
+            <div className="mockup-progress-fill"></div>
+          </div>
+        </div>
+      </div>
 
       <p className="preview-label">
         Color-coded Tajweed markup · Structured lesson path · Expert reciter audio

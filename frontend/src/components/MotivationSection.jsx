@@ -1,9 +1,8 @@
-const MILESTONES = [
-  { action: 'Complete a recitation lesson', reward: 'Milestone' },
-  { action: 'Perfect lesson score', reward: 'Excellence' },
-  { action: 'Maintain your streak', reward: 'Daily habit' },
-  { action: 'Finish a full Surah', reward: 'Surah complete' },
-  { action: 'Review an old ayah', reward: 'Consolidation' },
+const ITEMS = [
+  'Enhance your Hifz with quizzes',
+  'Improve your recitation',
+  'Maintain your streak',
+  'Finish a full Surah',
 ];
 
 export default function MotivationSection() {
@@ -17,26 +16,34 @@ export default function MotivationSection() {
         </p>
       </div>
 
-      {/* Scrolling marquee */}
-      <div className="marquee-wrap">
-        <div className="marquee-track">
-          {[...MILESTONES, ...MILESTONES].map((item, i) => (
-            <span className="marquee-item" key={i}>
-              {item.action} <span className="marquee-dot">·</span>
+      <div style={{
+        overflow: 'hidden',
+        width: '100%',
+        marginTop: 32,
+        maskImage: 'linear-gradient(to right, transparent, black 12%, black 88%, transparent)',
+        WebkitMaskImage: 'linear-gradient(to right, transparent, black 12%, black 88%, transparent)',
+      }}>
+        <div style={{
+          display: 'flex',
+          width: 'max-content',
+          animation: 'marqueeScroll 40s linear infinite',
+        }}>
+          {[...ITEMS, ...ITEMS, ...ITEMS, ...ITEMS].map((item, i) => (
+            <span key={i} style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              fontSize: 15,
+              color: 'var(--teal-200)',
+              fontStyle: 'italic',
+              fontFamily: "'Lora', serif",
+              whiteSpace: 'nowrap',
+              paddingRight: 48,
+            }}>
+              {item}
+              <span style={{ color: 'var(--gold-400)', marginLeft: 48, fontSize: 8, verticalAlign: 'middle' }}>◆</span>
             </span>
           ))}
         </div>
-      </div>
-
-      {/* Activity list */}
-      <div className="activity-list">
-        {MILESTONES.map((item, i) => (
-          <div className="activity-row" key={i}>
-            <span className="activity-name">{item.action}</span>
-            <span className="activity-divider" />
-            <span className="activity-reward">{item.reward}</span>
-          </div>
-        ))}
       </div>
     </section>
   );

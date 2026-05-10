@@ -2,9 +2,10 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <a href="#" className="navbar-logo">
-        <div className="navbar-logo-text">
+        <div className="navbar-logo-icon">🌙</div>
+        <div>
           <span className="navbar-logo-ar">مقرأتي</span>
-          Miqra<em>'ati</em>
+          <span className="navbar-logo-text">Miqra<em>'ati</em></span>
         </div>
       </a>
 
