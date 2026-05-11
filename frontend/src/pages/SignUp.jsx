@@ -320,7 +320,7 @@ export default function SignUp() {
               <button className="btn btn-outline" onClick={back}>← Back</button>
               <button
                 className="btn btn-gold"
-                onClick={() => navigate('/')}
+                onClick={() => navigate('/dashboard')}
                 disabled={!form.background}
               >
                 Begin my journey →
