@@ -65,6 +65,7 @@ const MILESTONES = [
 ];
 
 export default function Dashboard() {
+  const navigate = useNavigate();
   const tip = useMemo(() => TIPS[Math.floor(Math.random() * TIPS.length)], []);
   const xpPct = Math.round((USER.xpProgress / USER.xpToNext) * 100);
   const surahPct = Math.round((CURRENT_SURAH.memorized / CURRENT_SURAH.totalAyahs) * 100);
@@ -187,6 +188,7 @@ export default function Dashboard() {
             }}
               onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; }}
               onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; }}
+              onClick={() => { if (a.label === 'Continue lesson') navigate('/hifz'); }}
             >
               <div style={{ fontSize: 22, marginBottom: 8 }}>{a.icon}</div>
               <div style={{ fontSize: 14, fontWeight: 700, color: a.primary ? 'var(--white)' : 'var(--ink)', marginBottom: 3 }}>{a.label}</div>
@@ -221,13 +223,15 @@ export default function Dashboard() {
                     </span>
                   </div>
                 </div>
-                <button style={{
-                  background: 'var(--gold-600)', color: 'var(--white)',
-                  border: 'none', borderRadius: 'var(--r-lg)',
-                  padding: '9px 20px', fontSize: 13, fontWeight: 700,
-                  cursor: 'pointer', fontFamily: "'Lora', serif",
-                  boxShadow: '0 3px 0 var(--gold-900)', flexShrink: 0,
-                }}>
+                <button 
+                  onClick={() => navigate('/hifz')}
+                  style={{
+                    background: 'var(--gold-600)', color: 'var(--white)',
+                    border: 'none', borderRadius: 'var(--r-lg)',
+                    padding: '9px 20px', fontSize: 13, fontWeight: 700,
+                    cursor: 'pointer', fontFamily: "'Lora', serif",
+                    boxShadow: '0 3px 0 var(--gold-900)', flexShrink: 0,
+                  }}>
                   Continue ▶
                 </button>
               </div>

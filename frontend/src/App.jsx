@@ -10,6 +10,7 @@ import MotivationSection from './components/MotivationSection';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
+import HifzSession from './pages/HifzSession';
 
 function LandingPage() {
   return (
@@ -36,6 +37,7 @@ export default function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/hifz" element={<HifzSession />} />
       </Routes>
       <Footer />
     </>
